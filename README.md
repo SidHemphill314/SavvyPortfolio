@@ -13,4 +13,4 @@
 ​
 [I'm a link to a web page!](http://www.google.com)
 ​
-![alt text](https://www.facebook.com/photo.php?fbid=10213703551965514&l=14ff65db0b)
+![alt text]()
