@@ -1,16 +1,23 @@
-# **_Sid's Portfolio Project_**
+# *_Sidney Hemphill's Portfolio Project_*
 ​
-## _"To infinity and beyond!"_
-​
+## _Hello my name is Sidney Hemphill and I am an aspring coder!_
 
+![ProfilePic](https://avatars1.githubusercontent.com/u/44593254?s=460&v=4)
+
+
+
+---
+
+
+
+Here is a _list_ of **my** contact information:
 ​
-- _Phone:_ 314-203-7015
-- _Email:_ hemphillsid@gmail.com
-- _Facebook:_ 
-​
-​
+- Phone: [314-203-7015](https://www.facebook.com/sidney.hemphill.50)
+
+- Email: [hemphillsidneyj.@gmail.com](https://www.facebook.com/sidney.hemphill.50)
+
+- Facebook: [Sidney's Facebook](https://www.facebook.com/sidney.hemphill.50)
+
+
 ---
 ​
-[I'm a link to a web page!](http://www.google.com)
-​
-![alt text]()
