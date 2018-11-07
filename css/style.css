@@ -1,0 +1,47 @@
+#navigation {
+    background-color: blueviolet;
+}
+
+
+#header {
+    
+    background-color: pink;
+ 
+
+}
+img {
+    margin:100px;
+    display:block;
+    margin: 1em auto;
+    max-width: 300px;
+    width: 80%;
+}
+
+#content {
+    background-color: aliceblue;
+    padding: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#footer {
+    background-color: firebrick;
+}
+ .container {
+     margin: 0 auto;
+     max-width: 900px;
+     width: 90%
+ }
+
+.brand{ 
+    color:blue;
+}
+
+.emphasis {
+    font-weight: bold;
+}
+
+#middle {
+    font-size: 2em;
+    font-style: italic;
+}
