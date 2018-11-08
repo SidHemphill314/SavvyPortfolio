@@ -1,32 +1,35 @@
-#navigation {
-    background-color: blueviolet;
+p{
+    color: white;
 }
-
 
 #header {
+    color: white;
+    background-color: black;
     
-    background-color: pink;
- 
-
 }
+
 img {
-    margin:100px;
+
     display:block;
-    margin: 1em auto;
+ /*Responsive Web Design down below */
     max-width: 300px;
     width: 80%;
+    margin:2px auto;
 }
 
-#content {
-    background-color: aliceblue;
+#content > h1 {
+    background-color: black;
     padding: 100px;
     margin-right: 20px;
     margin-left: 20px;
+    color: white;
 }
 
 #footer {
-    background-color: firebrick;
+    background-color: black;
+    color: white;
 }
+
  .container {
      margin: 0 auto;
      max-width: 900px;
@@ -34,14 +37,48 @@ img {
  }
 
 .brand{ 
-    color:blue;
+    color: silver;
 }
 
 .emphasis {
     font-weight: bold;
+    color: whitesmoke;
+    
 }
 
 #middle {
     font-size: 2em;
     font-style: italic;
+    color: white;
+}
+#navigation ul:first-child {
+    background-color: rgb(0, 0, 0);
+
+}
+
+#navigation {
+    background-color: black;
+    color: white;
+}
+#navigation ul:hover{
+    background-color: blue; 
+
+}
+
+#navigation > ul > li {
+    position: relative;
+    display: inline;
+    list-style: none;
+}
+
+#navigation .dropdown {
+    display: none;
+    position: absolute;
+    top: 1em;
+    right: 0;
+
+}
+
+#navigation a:hover + .dropdown {
+    display: block;
 }
