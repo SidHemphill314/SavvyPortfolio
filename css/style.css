@@ -28,16 +28,18 @@ img {
 #footer {
     background-color: black;
     color: white;
+    font-size: 2em;
+    font-weight: bold;
 }
 
  .container {
      margin: 0 auto;
      max-width: 900px;
-     width: 90%
+     width: 90%;
  }
 
 .brand{ 
-    color: silver;
+    color: white;
 }
 
 .emphasis {
@@ -57,11 +59,18 @@ img {
 }
 
 #navigation {
-    background-color: black;
+    background-color: rgb(240, 27, 27);
     color: white;
+    /*floating navigation Bar Code*/
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    
 }
 #navigation ul:hover{
-    background-color: blue; 
+    background-color: white; 
 
 }
 
@@ -69,16 +78,24 @@ img {
     position: relative;
     display: inline;
     list-style: none;
+    color: white;
+    padding: 25px;
 }
 
 #navigation .dropdown {
     display: none;
+    left: 0;
     position: absolute;
-    top: 1em;
-    right: 0;
+    top: 20px;
+    background-color: black;
 
 }
 
-#navigation a:hover + .dropdown {
+#navigation a:hover + .dropdown, 
+#navigation a + .dropdown :hover {
     display: block;
+    color: white;
 }
+
+
+
