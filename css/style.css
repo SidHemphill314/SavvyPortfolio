@@ -1,17 +1,12 @@
-body{
+body {
     background-color: blue;
     display: grid;
-    min-height: 100wh;
+    min-height: 100vh;
     grid-template-rows: min-content min-content auto min-content;
-    grid-template-areas: 
-        "navigation"
-        "header"
-        "content"
-         "footer";
+    grid-template-areas: "navigation" "header" "content" "footer";
 }
 
-p{
-
+p {
     color: white;
     font-family: 'Press Start 2P';
 }
@@ -19,27 +14,25 @@ p{
 #header {
     color: white;
     background-color: black;
-    grid-area: header; 
-    
+    grid-area: header;
 }
 
 img {
-
-    display:block;
- /*Responsive Web Design down below */
+    display: block;
+    /*Responsive Web Design down below */
     max-width: 300px;
     width: 80%;
-    margin:2px auto;
+    margin: 2px auto;
 }
 
-#content > h1 {
+#content>h1 {
     background-color: black;
     padding: 100px;
     margin-right: 20px;
     margin-left: 20px;
     color: white;
-    font-family: "Press Start 2P"; 
-    grid-area: content; 
+    font-family: "Press Start 2P";
+    grid-area: content;
 }
 
 #footer {
@@ -47,23 +40,22 @@ img {
     color: white;
     font-size: 2em;
     font-weight: bold;
-    grid-area: footer; 
+    grid-area: footer;
 }
 
- .container {
-     margin: 0 auto;
-     max-width: 900px;
-     width: 90%;
- }
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 90%;
+}
 
-.brand{ 
+.brand {
     color: white;
 }
 
 .emphasis {
     font-weight: bold;
     color: whitesmoke;
-    
 }
 
 #middle {
@@ -71,19 +63,20 @@ img {
     font-style: italic;
     color: white;
 }
+
 #navigation {
     background-color: grey;
-    font-family: "Press Start 2P"; 
+    font-family: "Press Start 2P";
     position: sticky;
-    top: 0; 
-    grid-area: navigation; 
-}
-#navigation ul:hover{
-    background-color: black; 
-
+    top: 0;
+    grid-area: navigation;
 }
 
-#navigation > ul > li {
+#navigation ul:hover {
+    background-color: black;
+}
+
+#navigation>ul>li {
     align-items: center;
     position: relative;
     display: inline;
@@ -91,44 +84,40 @@ img {
     color: white;
     padding: 10px;
     flex-wrap: wrap;
-    padding: 0; 
+    padding: 0;
 }
 
 #navigation .dropdown {
-    display: none;
-    left: 0;
     position: absolute;
-    top: 20px;
-    background-color:red;
-
+    background-color: red;
+    display: none;  
+    padding: 5px;
 }
 
-#navigation a:hover + .dropdown, 
-#navigation a + .dropdown :hover {
+#navigation a:hover+.dropdown, #navigation a+.dropdown :hover {
     display: block;
-    color: white;
 }
 
 #navigation ul {
     align-items: center;
-    height: 10vh; 
-    display: flex;
-    justify-content: space-evenly; 
-    flex-direction: row; 
+    height: 10vh;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
 
 @media(min-width: 750px) {
-    body{
+    body {
         background-color: white;
         grid-template-columns: 20% auto;
         grid-template-rows: min-content auto min-content;
-        grid-template-areas: 
-        "navigation header"
-        "navigation content"
-        "navigation footer";
+        grid-template-areas: "navigation header" "navigation content" "navigation footer";
     }
-    #navigation > ul {
+    #navigation>ul {
         flex-direction: column;
     }
-}
 
+    #navigation .dropdown {
+       
+        left: 4vw;
+    }
+}
