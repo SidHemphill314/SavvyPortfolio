@@ -1,10 +1,25 @@
+body{
+    background-color: blue;
+    display: grid;
+    min-height: 100wh;
+    grid-template-rows: min-content min-content auto min-content;
+    grid-template-areas: 
+        "navigation"
+        "header"
+        "content"
+         "footer";
+}
+
 p{
+
     color: white;
+    font-family: 'Press Start 2P';
 }
 
 #header {
     color: white;
     background-color: black;
+    grid-area: header; 
     
 }
 
@@ -23,13 +38,16 @@ img {
     margin-right: 20px;
     margin-left: 20px;
     color: white;
+    font-family: "Press Start 2P"; 
+    grid-area: content; 
 }
 
 #footer {
-    background-color: black;
+    background-color: red;
     color: white;
     font-size: 2em;
     font-weight: bold;
+    grid-area: footer; 
 }
 
  .container {
@@ -54,27 +72,26 @@ img {
     color: white;
 }
 #navigation {
-    background-color: rgb(240, 27, 27);
-    color: white;
-    /*floating navigation Bar Code*/
-    position: fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
-    padding: 15px;
-    
+    background-color: grey;
+    font-family: "Press Start 2P"; 
+    position: sticky;
+    top: 0; 
+    grid-area: navigation; 
 }
 #navigation ul:hover{
-    background-color: white; 
+    background-color: black; 
 
 }
 
 #navigation > ul > li {
+    align-items: center;
     position: relative;
     display: inline;
     list-style: none;
     color: white;
-    padding: 25px;
+    padding: 10px;
+    flex-wrap: wrap;
+    padding: 0; 
 }
 
 #navigation .dropdown {
@@ -92,5 +109,26 @@ img {
     color: white;
 }
 
+#navigation ul {
+    align-items: center;
+    height: 10vh; 
+    display: flex;
+    justify-content: space-evenly; 
+    flex-direction: row; 
+}
 
+@media(min-width: 750px) {
+    body{
+        background-color: white;
+        grid-template-columns: 20% auto;
+        grid-template-rows: min-content auto min-content;
+        grid-template-areas: 
+        "navigation header"
+        "navigation content"
+        "navigation footer";
+    }
+    #navigation > ul {
+        flex-direction: column;
+    }
+}
 
