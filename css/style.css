@@ -12,7 +12,7 @@ p {
 }
 
 h1 {
-    font-size: 20px;
+    font-weight: bold;
 }
 
 #header {
@@ -32,10 +32,11 @@ img {
     width: 80%;
     margin: 2px auto;
     margin-bottom: 20px;
+    
 }
 
 #content>h1 {
-    background-color:  rgba(226, 150, 8, 0.534);;
+    background-color:  rgba(226, 150, 8, 0.534);
     padding: 100px;
     margin-right: 20px;
     margin-left: 20px;
@@ -78,20 +79,20 @@ img {
 #navigation {
     background-color: rgb(255, 253, 253);
     font-family: "Press Start 2P";
+    line-height: 40px;
     position: sticky;
     top: 0;
     grid-area: navigation;
 }
 
 #navigation ul:hover {
-    background-color:  rgba(226, 150, 8, 0.534);;
+    background-color:  rgba(226, 150, 8, 0.534);
 }
 
 #navigation>ul>li {
     align-items: center;
     position: relative;
     display: inline;
-    list-style: none;
     color: white;
     padding: 10px;
     flex-wrap: wrap;
