@@ -1,5 +1,5 @@
-body {
-    background-color:  #815c06b9;
+#root {
+    background-color:  white;
     display: grid;
     min-height: 100vh;
     grid-template-rows: min-content min-content auto min-content;
@@ -26,8 +26,12 @@ h1 {
 }
 
 img {
+    border-radius: 50%;
+    border-style: solid;
+
     display: block;
     /*Responsive Web Design down below */
+     
     max-width: 300px;
     width: 80%;
     margin: 2px auto;
@@ -118,14 +122,14 @@ img {
 }
 
 @media(min-width: 750px) {
-    body {
+    #root {
         background-color:  rgba(226, 150, 8, 0.534);
         grid-template-columns: 20% auto;
         grid-template-rows: min-content auto min-content;
         grid-template-areas: "navigation header" "navigation content" "navigation footer";
     }
     #navigation>ul {
-        flex-direction: column;
+        flex-direction: column ;
     }
 
     #navigation .dropdown {
