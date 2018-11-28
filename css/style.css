@@ -129,7 +129,7 @@ img {
         grid-template-areas: "navigation header" "navigation content" "navigation footer";
     }
     #navigation>ul {
-        flex-direction: column ;
+        flex-direction: row ;
     }
 
     #navigation .dropdown {
