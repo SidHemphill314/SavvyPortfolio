@@ -1,10 +1,9 @@
 export default function Content(){
-return `
+    return `
 <div id="content">
 <div class="container">
-    <h1>Welcome!</h1>
-    <p>I also love videogames!</p>
+    <p>I am an aspiring Web Develop and Digital Artist!</p>
     </div>
 </div>
-` ; 
+` ;
 }
