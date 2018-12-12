@@ -1,22 +1,31 @@
-export default function Navigation(state){
-    var links = state[state.active].links;
-    var list = '';
+import { capitalize } from 'lodash';
 
-for(let i = 0; i < links.length, i++) {
-    list += `
+function buildLinks(links){
+    var link = '';
+    var list = '';
+    
+    for(let i = 0; i < links.length; i++){
+        if(links[i] !== 'home'){
+            link = links[i];
+        }
+        list += `
     <li> 
-    <a href="#">${links[i]}</a>
+    <a href="/${links[i]}" data-navigo>${captialize(links[i])}</a>
     </li>
     `;
-    console.log(list);
+    }
 
+    return list;
 }
-    return `
 
+export default function Navigation(state){
+    return `
 <div id="navigation">
         <div class="container">
-         ${list}
+        ${buildLinks(state[state.active].link)}
         </div>
     </div>
     `;
 }
+
+

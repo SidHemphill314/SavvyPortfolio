@@ -3,12 +3,15 @@ import Content from './src/Content';
 import greet from './src/Greet';
 import Header from './src/Header';
 import Navigation from './src/Navigation';
+import Navigo from 'navigo';
 
-var links;
+var router = new Navigo(window.location.origin);
+
+
 var State = {
     'active': 'Home',
     'Home': {
-        'title': 'Hey Ball Bags',
+        'title': 'Hello Everyone! Welcome To My Savvy Coders Portfolio Site!',
         'links': [ 'blog','Contact','projects' ]
     },
     'blog': {
@@ -29,36 +32,45 @@ var State = {
 
 var root = document.querySelector('#root');
 
-function handleNavigation(event){
-    // pull the compont name from the text in the anchor tag
-    event.preventDefault();
-    console.log(event.target.activeTextContent);
-
-
-    State.active = event.target.textContent;
-
-render(State); //eslint-disable-line
+function handleNavigation(params){
+    console.log(params.page);
+    // event.preventDefault();
+    State.active = params.page;
+    // State.active = event.target.textContent;
+    // eslint-disable-next-line no-use-before-define
+    render(State);
 }
 
 
 function render(state){
-    root.innerHTML =
-    `
-    ${Navigation()}
+    // var links;
+
+    root.innerHTML = `
+    ${Navigation(state)}
     ${Header(state)}
-    ${Content()}
-    ${Footer()}
-   
-`;
+    ${Content(state)}
+    ${Footer(state)}
+   `;
 
     greet();
 
+    router.updatePageLinks();
+
     
-    links = document.querySelectorAll('#navigation a');
+    /* links = document.querySelectorAll('#navigation a');
     for(let i = 0; i < links.lenght; i ++){
         links[i].addEventListener(
             'click',handleNavigation
         );
-    }
+    }*/
 }
-render(State);
+
+// render(State);
+
+router.on
+    .on('/:page', handleNavigation)
+    .on('/',() => handleNavigation({ 'page': 'home' }))
+    .resolve();
+/* State vs state
+
+State in the proper case is used as a variable to tell us what to render.  state is a parameter to the function*/
