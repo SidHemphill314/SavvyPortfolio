@@ -67,7 +67,7 @@ function render(state){
 
 // render(State);
 
-router.on
+router
     .on('/:page', handleNavigation)
     .on('/',() => handleNavigation({ 'page': 'home' }))
     .resolve();

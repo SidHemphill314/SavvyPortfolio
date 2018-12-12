@@ -1,7 +1,7 @@
 import { capitalize } from 'lodash';
 
 function buildLinks(links){
-    var link = '';
+    var links = '';
     var list = '';
     
     for(let i = 0; i < links.length; i++){
@@ -10,7 +10,7 @@ function buildLinks(links){
         }
         list += `
     <li> 
-    <a href="/${links[i]}" data-navigo>${captialize(links[i])}</a>
+    <a href="/${links[i]}" data-navigo>${capitalize(links[i])}</a>
     </li>
     `;
     }
@@ -22,7 +22,7 @@ export default function Navigation(state){
     return `
 <div id="navigation">
         <div class="container">
-        ${buildLinks(state[state.active].link)}
+        ${buildLinks(state[state.active].links)}
         </div>
     </div>
     `;
