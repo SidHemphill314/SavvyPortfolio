@@ -10,7 +10,7 @@ var router = new Navigo(window.location.origin);
 
 var State = {
     'active': 'Home',
-    'Home': {
+    'home': {
         'title': 'Hello Everyone! Welcome To My Savvy Coders Portfolio Site!',
         'links': [ 'blog','Contact','projects' ]
     },
@@ -46,7 +46,7 @@ function render(state){
     // var links;
 
     root.innerHTML = `
-    ${Navigation(state)}
+    ${Navigation(State)}
     ${Header(state)}
     ${Content(state)}
     ${Footer(state)}

@@ -18,7 +18,7 @@ export default function Navigation(state){
     return `
 <div id="navigation">
         <div class="container">
-        ${state[state.active].links.map(buildLink).join('')}
+        ${state[state.active].link.map(buildLink).join('')}
         </div>
     </div>
     `;
