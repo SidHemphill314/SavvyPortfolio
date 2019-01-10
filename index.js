@@ -5,8 +5,8 @@ import Header from './src/Header';
 import Navigation from './src/Navigation';
 import Navigo from 'navigo';
 import Store from './src/Store';
-import { html, render} from 'lit-html';
-import { addListener } from 'cluster';
+import { html, render } from 'lit-html';
+
 
 var router = new Navigo(window.location.origin);
 
@@ -44,10 +44,9 @@ function handleNavigation(params){
 
         return state;
     });
-
 }
 
-function App(state) {
+function App(state){
     return html ` 
     ${Navigation(State)}
     ${Header(state)}
@@ -76,12 +75,14 @@ function render(state){
 }
 */
 store.addListener(start);
-store.addListener() => router.updatePageLinks());
+store.addListener(() => router.updatePageLinks());
 
 router
     .on('/:page', handleNavigation)
     .on('/', () => handleNavigation({ 'page': 'home' }))
     .resolve();
+
+router.updatePageLinks();
 
 fetch('https://jsonplaceholder.typicode.com/')
     .then((response) => response.json())
@@ -90,5 +91,5 @@ fetch('https://jsonplaceholder.typicode.com/')
             state.posts = posts;
 
             return state;
-        }));
+        });
     });
