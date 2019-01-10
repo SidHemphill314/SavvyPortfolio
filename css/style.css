@@ -32,7 +32,7 @@ img {
     display: block;
     border-color: aqua;
     /*Responsive Web Design down below */
-    max-width: 750px;
+    max-width: 750p;
     width: 80%;
     margin: 2px auto;
     margin-bottom: 20px;

@@ -1,5 +1,6 @@
+import { html } from 'lit-html';
 export default function Footer(){
-    return `
+    return html`
 <div id="footer">
         <div class="container"></div>
         <i class="fas fa-phone"></i>
